@@ -1,0 +1,20 @@
+Before parsing, a clean up for a standard address output
+COMMON ISSUES:
+#1 remove Leading or trailing whitespace
+
+#2 Convert alternate separators (/, ;, -, –, —) into a single comma , when they act as delimiters.
+Ensure consistent comma spacing: every comma is followed by exactly one space.
+Remove empty tokens created by duplicate commas (,,).
+
+#3 Symbols cleanups
+Remove parentheses although keep inside content.
+as well as replace and remove # for house numbers ---> #5 to 5
+
+#4 stip off leading assigned labels
+example. address: / company:.....etc
+
+#5 Detect missing commas or separators where possible
+
+#a consistent output format
+Street, house number, district, postal code, region, city, country.
+
