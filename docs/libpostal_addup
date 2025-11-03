@@ -1,0 +1,9 @@
+Usage with libpostal, is an open-source library that automatically analyzes and splits
+unstructured addresses into clear, labeled parts such as street, city, postal code, and country.
+It uses machine learning models which trained on millions of real-world addresses,
+
+to have a clearer scope and more accurate parsing to give out clean outputs, i needed more accurate
+foundation and pre-trained to reduce the extensive over buildup.
+
+- Measure consistency of final output:
+Street, House Number, District, Postal Code, Region, City, Country
