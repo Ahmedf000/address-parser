@@ -7,6 +7,6 @@
   I want to automatically clean and understand any address a user enters. Instead of writing many “if/else” conditions or regex, Libpostal can handle global address formats accurately.
 
 - **What I plan to document and observe:**  
-  - How accurate it is (success rate)  
+  - How accurate it is (___________)  
   - Which address types it parses well or struggles with  
-  - What fallback logic I’ll add when parsing fails (e.g., manual correction)
+  - What fallback logic I’ll add when parsing fails (____________)
