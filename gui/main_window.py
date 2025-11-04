@@ -1,8 +1,5 @@
 """
-MainWindow Module
-
 All the styling and GUI adjusting worked within this file
-
 --------------------
 Author: Ahmed Farid
 Date: 11/03/2025
@@ -15,7 +12,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Address Parser")
         self.setGeometry(700, 300, 800, 500)
         self.input = QTextEdit()
-        self.button = QPushButton("Clean up")
+        self.button = QPushButton("Clean Address")
         self.output = QTextEdit()
         self.build_ui()
 
@@ -31,22 +28,53 @@ class MainWindow(QMainWindow):
         vbox.addWidget(self.output)
 
         self.button.setObjectName("button_editor")
+        self.input.setObjectName("input_editor")
+        self.output.setObjectName("output_editor")
 
-        self.button.setStyleSheet("""
+
+        self.setStyleSheet("""
+        #input_editor {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 8px;  
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            color: #333;      
+        }
+        #output_editor {
+            background-color: #f0f0f0;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            padding: 8px;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            color: #222;
+        }
         #button_editor { 
-            background-color: black;
-            color: white;
-            border-radius: 5px;
-            top-padding: 20px;
-            button-padding: 20px;
+            color: black;
+            border: 1px solid #555;
+            border-radius: 6px;
+            padding: 10px 26px;
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 0.5px;
         }
-        #button_editor::hover {
-        background-color: white;
-        color: black;
+        #button_editor:hover {
+            background-color: white;
+            border: 1px solid #777;
+            color: black;
+            cursor: pointer;
         }
-        
         """)
 
         central_widget.setLayout(vbox)
+
+        self.button.clicked.connect(self.clean_up)
+
+    def clean_up(self):
+        text = self.input.toPlainText()
+        clean = text.strip()
+        self.output.setText(clean)
 
 
