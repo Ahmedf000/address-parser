@@ -39,7 +39,7 @@ class MainWindow(QMainWindow):
             border-radius: 6px;
             padding: 8px;  
             font-family: Consolas, monospace;
-            font-size: 14px;
+            font-size: 30px;
             color: #333;      
         }
         #output_editor {
@@ -48,7 +48,7 @@ class MainWindow(QMainWindow):
             border-radius: 6px;
             padding: 8px;
             font-family: Consolas, monospace;
-            font-size: 14px;
+            font-size: 30px;
             color: #222;
         }
         #button_editor { 
