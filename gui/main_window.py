@@ -4,7 +4,8 @@ All the styling and GUI adjusting worked within this file
 Author: Ahmed Farid
 Date: 11/03/2025
 """
-from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QPushButton, QTextEdit, QWidget
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QPushButton, QTextEdit
 
 class MainWindow(QMainWindow):
     def __init__(self):
